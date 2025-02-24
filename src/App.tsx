@@ -21,6 +21,12 @@ import ReservationCreate from "./pages/reservations/ReservationCreate";
 import ReservationEdit from "./pages/reservations/ReservationEdit";
 import ReservationView from "./pages/reservations/ReservationView";
 
+// Guests
+import Guests from "./pages/guests/Guests";
+import GuestCreate from "./pages/guests/GuestCreate";
+import GuestEdit from "./pages/guests/GuestEdit";
+import GuestView from "./pages/guests/GuestView";
+
 const queryClient = new QueryClient();
 
 const App: React.FC = () => {
@@ -46,6 +52,12 @@ const App: React.FC = () => {
                 <Route path="/reservations/create" element={<ReservationCreate />} />
                 <Route path="/reservations/:id/edit" element={<ReservationEdit />} />
                 <Route path="/reservations/:id" element={<ReservationView />} />
+                
+                {/* Guests Routes */}
+                <Route path="/guests" element={<Guests />} />
+                <Route path="/guests/create" element={<GuestCreate />} />
+                <Route path="/guests/:id/edit" element={<GuestEdit />} />
+                <Route path="/guests/:id" element={<GuestView />} />
                 
                 <Route path="*" element={<NotFound />} />
               </Routes>
